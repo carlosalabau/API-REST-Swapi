@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<section class="container">
+        <ul class="row">
+            <li *ngFor="let pelicula of peliculas" class="col-xl-4 col-lg-4">
+                <div class="card">
+                    <img src="../../../assets/img/peliculas/{{pelicula.episode_id}}.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{pelicula.title}}</h5>
+                      <p class="card-text">
+                          <span class="title">Descripcion:</span> {{pelicula.opening_crawl}}<br>
+                          <!-- <a><button *ngIf="pelicula.opening_crawl.length > 150">Ver mas</button></a> -->
+                        <span class="title">Director:</span> {{pelicula.director}}<br>
+                        <span class="title">Lanzamiento:</span> {{pelicula.release_date | date: 'MMMM-yyyy'}}<br>
+                      </p>
+                      <!-- <a routerLink="/personajes" class="btn btn-primary boton">Personajes</a>
+                      <a routerLink="/Planetas" class="btn btn-primary">Planetas</a> -->
+                    </div>
+                  </div>
+            </li>
+        </ul>
+</section>
+<app-footer></app-footer>

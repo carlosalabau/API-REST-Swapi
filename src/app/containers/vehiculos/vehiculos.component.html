@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<section class="container">
+  <div class="botones d-flex justify-content-between">
+    <button class="btn btn-primary btn-sm" (click)="beforePage()" [disabled]="paginaActual == 1">Anterior</button>
+    <button class="btn btn-primary btn-sm" (click)="nextPage()" [disabled]="paginaActual == 4">Siguiente</button>
+  </div>
+          <ul class="row">
+            <li *ngFor="let vehi of vehiculos" class="col-xl-4 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">{{vehi.name}}</h5>
+                      <p class="card-text">
+                          <span class="title">Peliculas:</span>
+                            <span *ngFor="let v of vehi.peli">
+                              <ul>
+                                <li>
+                                  {{v.title}}
+                                </li>
+                              </ul>
+                            </span>
+                        <span class="title">Pasajeros:</span> {{vehi.passengers}}<br>
+                        <span class="title" *ngIf="vehi.peli.length > 0">Piloto:</span> 
+                            <span *ngFor="let pilot of vehi.piloto">
+                              <ul>
+                                <li>
+                                  {{pilot.name}}
+                                </li>
+                              </ul>
+                            </span>
+                      </p>
+                    </div>
+                  </div>
+            </li>
+        </ul>
+</section>
+<app-footer></app-footer>

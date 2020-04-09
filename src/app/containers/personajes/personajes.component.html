@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+<section class="container">
+  <div class="botones d-flex justify-content-between">
+    <button class="btn btn-primary btn-sm" (click)="beforePage()" [disabled]="paginaActual == 1">Anterior</button>
+    <button class="btn btn-primary btn-sm" (click)="nextPage()" [disabled]="paginaActual == 4">Siguiente</button>
+  </div>
+      <ul class="row">
+        <li *ngFor="let personaje of personajes" class="col-xl-4 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{personaje.name}}</h5>
+                  <p class="card-text">
+                    <span class="title">Lugar de nacimiento:</span> {{personaje.especie}}<br>
+                    <span class="title" >Especie:</span> {{personaje.lugar}}<br>
+                  </p>
+                  <!-- <a routerLink="/personajes" class="btn btn-primary boton">Personajes</a>
+                  <a routerLink="/Planetas" class="btn btn-primary">Planetas</a> -->
+                </div>
+              </div>
+        </li>
+    </ul>
+  </section>
+  <app-footer></app-footer>

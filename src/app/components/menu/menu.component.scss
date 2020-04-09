@@ -1,0 +1,23 @@
+nav li{
+    list-style: none;
+    padding:0 20px;
+    border-right: 1px solid white;
+}
+nav li:first-child{
+    border-left: 1px solid white;
+}
+nav a li:hover{
+    color:#f45969;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav{
+    height: 60px;
+    background-color: rgba(0,0,0,0.9);
+}
+nav ul{
+    align-items: center;
+    height: 60px;
+}

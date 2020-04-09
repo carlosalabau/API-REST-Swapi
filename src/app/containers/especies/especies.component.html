@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+<section class="container">
+  <div class="botones d-flex justify-content-between">
+    <button class="btn btn-primary btn-sm" (click)="beforePage()" [disabled]="paginaActual == 1">Anterior</button>
+    <button class="btn btn-primary btn-sm" (click)="nextPage()" [disabled]="paginaActual == 4">Siguiente</button>
+  </div>
+  <ul class="row">
+            <li *ngFor="let especie of especies" class="col-xl-4 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">{{especie.name}}</h5>
+                      <p class="card-text">
+
+                          <span class="title">Habitantes:</span>
+                            <span *ngFor="let gente of especie.gente">
+                              <ul>
+                                <li>
+                                  {{gente.name}}
+                                </li>
+                              </ul>
+                            </span>
+                        <span class="title">Lenguaje:</span> {{especie.language}}<br>
+                        <span class="title" *ngIf="especie.peli.length > 0">Peliculas:</span> 
+                            <span *ngFor="let peli of especie.peli">
+                              <ul>
+                                <li>
+                                  {{peli.title}}
+                                </li>
+                              </ul>
+                            </span>
+                      </p>
+                    </div>
+                  </div>
+            </li>
+        </ul>
+</section>
+<app-footer></app-footer>
