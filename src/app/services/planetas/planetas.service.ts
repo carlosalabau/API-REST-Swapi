@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PlanetasService {
 
-  BASE = 'https://swapi.co/api/planets'
+  BASE = 'https://swapi.dev/api/planets'
 
   constructor(
     private http: HttpClient

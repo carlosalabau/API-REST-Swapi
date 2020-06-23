@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NavesService {
 
-  BASE = 'https://swapi.co/api/starships';
+  BASE = 'https://swapi.dev/api/starships';
 
   constructor(
     private http: HttpClient

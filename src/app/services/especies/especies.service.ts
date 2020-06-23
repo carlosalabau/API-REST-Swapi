@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EspeciesService {
-BASE = 'https://swapi.co/api/species';
+BASE = 'https://swapi.dev/api/species';
   constructor(
     private http: HttpClient
   ) { }

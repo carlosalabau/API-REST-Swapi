@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class VehiculosService {
 
-  BASE = 'https://swapi.co/api/vehicles'
+  BASE = 'https://swapi.dev/api/vehicles'
   constructor(
     private http: HttpClient
   ) { }
